@@ -81,7 +81,7 @@ def calculate_avg_price_by_neighbourhood_group_and_room(listings):
 
         key = (group, room)
 
-        if key not in totals:
+        if key not in total_price:
             total_price[key] = 0
             room_count[key] = 0
 
