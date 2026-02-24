@@ -33,7 +33,7 @@ def load_listings(f):
     # TODO: Read the CSV using csv.reader and convert it to a list a dictionaries
     listings = []
 
-    with open('new_york_listings_2024.csv', newline='') as infile:
+    with open(f, newline='') as infile:
         csv_reader = csv.reader(infile)
         
         # Read header row
