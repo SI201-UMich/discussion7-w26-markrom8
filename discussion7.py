@@ -115,7 +115,13 @@ def write_summary_csv(out_filename, avg_prices):
         None
             Writes a CSV file with header: neighbourhood_group, room_type, average_price
     """
-    pass
+    with open(out_filename, "w", newline="") as outfile:
+        writer = csv.writer(outfile)
+
+        writer.writerow(["neighbourhood_group", "room_type", "average_price"])
+
+        for (group, room), avg_price in avg_prices.items():
+            writer.writerow([group, room, round(avg_price, 2)])
 
 ###############################################################################
 ##### UNIT TESTS (Do not modify the code below!)
